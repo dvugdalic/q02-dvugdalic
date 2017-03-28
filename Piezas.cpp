@@ -21,13 +21,23 @@
  * specifies it is X's turn first
 **/
 Piezas::Piezas();
+{
+	board[3][4] = Blank;
+	if(board[3][4] = Blank);
+	{
+		turn = X;
+	}
+}
 
 /**
  * Resets each board location to the Blank Piece value, with a board of the
  * same size as previously specified
 **/
 void Piezas::reset();
-
+{
+	board[3][4] = Blank;
+	return;
+}
 /**
  * Places a piece of the current turn on the board, returns what
  * piece is placed, and toggles which Piece's turn it is. dropPiece does 
@@ -37,13 +47,17 @@ void Piezas::reset();
  * Trying to drop a piece where it cannot be placed loses the player's turn
 **/ 
 Piece Piezas::dropPiece(int column);
-
+{
+	
+}
 /**
  * Returns what piece is at the provided coordinates, or Blank if there
  * are no pieces there, or Invalid if the coordinates are out of bounds
 **/
 Piece Piezas::pieceAt(int row, int column);
+{
 
+}
 /**
  * Returns which Piece has won, if there is a winner, Invalid if the game
  * is not over, or Blank if the board is filled and no one has won ("tie").
@@ -54,3 +68,9 @@ Piece Piezas::pieceAt(int row, int column);
  * line, it is a tie.
 **/
 Piece Piezas::gameState();
+{
+	if (board[3][4] != Blank)
+	{
+		return board[3][4];
+	}
+}
